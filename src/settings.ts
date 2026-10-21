@@ -2,6 +2,7 @@ import { PluginSettingTab, type SettingDefinitionItem } from 'obsidian';
 import { sponsorsSettingItems } from './license/github-obsidian';
 import type VaultPathPortabilityPlugin from './main';
 import { PRO_UI } from './pro';
+import { helloSettingItems } from './hello/settings';
 
 export interface VaultPathPortabilitySettings { autoScan: boolean }
 export const DEFAULT_SETTINGS: VaultPathPortabilitySettings = { autoScan: false };
@@ -11,6 +12,11 @@ export function normalizeSettings(saved: unknown): VaultPathPortabilitySettings 
 export class VaultPathPortabilitySettingTab extends PluginSettingTab {
 	declare plugin: VaultPathPortabilityPlugin;
 	getSettingDefinitions(): SettingDefinitionItem[] {
+		// The product rows, then the "More from NoteMods" card (packages/hello).
+		return [...this.productSettingDefinitions(), ...helloSettingItems()];
+	}
+
+	productSettingDefinitions(): SettingDefinitionItem[] {
 		return [
 			{ name: 'Scan when paths change (Pro)', desc: 'Scan after file or folder creation, rename or deletion. Show a count in the desktop status bar.', control: { type: 'toggle', key: 'autoScan', defaultValue: false } },
 			...(this.plugin.pro ? sponsorsSettingItems(this.plugin.pro, PRO_UI) : []),

@@ -4,7 +4,7 @@ Vault Path Portability finds names that can cause trouble when you move an Obsid
 
 <img src="https://raw.githubusercontent.com/theluckystrike/vault-path-portability/HEAD/docs/report.png" alt="A vault path report grouped by portability rule" width="720">
 
-The free tier includes the full scan, file opening and Markdown copying. Pro adds applying rename suggestions, automatic scans with a status count and export to a note, for $15 one time or $5 a month. [Get Pro](https://github.com/sponsors/theluckystrike?metadata_source=vault-path-portability) or choose the [$15 one-time offer](https://github.com/sponsors/theluckystrike/sponsorships?tier_id=666162&metadata_source=vault-path-portability).
+The free tier includes the full scan, file opening and Markdown copying. Pro adds applying rename suggestions, automatic scans with a status count and export to a note. [Get Pro](https://github.com/sponsors/theluckystrike?metadata_source=vault-path-portability) or choose the [$15 one-time offer](https://github.com/sponsors/theluckystrike/sponsorships?tier_id=666162&metadata_source=vault-path-portability).
 
 Files with distinct names on one file system can collide on another. Review these groups before copying your vault. Scanning never renames, edits or deletes a file.
 
@@ -24,7 +24,7 @@ Safe Filename Linter replaces illegal and link-breaking characters, with automat
 
 <img src="https://raw.githubusercontent.com/theluckystrike/vault-path-portability/HEAD/docs/copy.png" alt="The copy action beside the scan controls" width="720">
 
-Select Open file beside a result to inspect that note or attachment. Folders appear in the report too, but do not have a file-opening button. Select Copy Markdown to place the full current report on the clipboard. Paste it into a note, a support request or your own migration checklist. All these actions are available without an account or payment.
+Select Open file beside a result to inspect that note or attachment. Folders appear in the report too, but do not have a file-opening button. Select Copy Markdown to place the full current report on the clipboard. Paste it into a note, a support request or your own migration checklist.
 
 Copying performs a fresh scan. An empty report explains the scan boundary. It does not certify a sync provider or prove that an archive contains every file.
 
@@ -48,7 +48,7 @@ Export to note creates a new Markdown note in the vault root. If the default nam
 
 ## Install
 
-When available in the community directory, open Settings, Community plugins and Browse. Search for Vault Path Portability, install it and enable it. For a manual installation, copy `main.js`, `manifest.json` and `styles.css` from a release into `<vault>/.obsidian/plugins/vault-path-portability/`, then reload the community plugin list.
+Open Settings, Community plugins and Browse. Search for Vault Path Portability, install it and enable it. For a manual installation, copy `main.js`, `manifest.json` and `styles.css` from a release into `<vault>/.obsidian/plugins/vault-path-portability/`, then reload the community plugin list.
 
 The plugin requires Obsidian 1.13.4 or newer. It uses public vault and workspace APIs and works on desktop and mobile. There are no default hotkeys.
 
@@ -64,6 +64,8 @@ The plugin requires Obsidian 1.13.4 or newer. It uses public vault and workspace
 Suggestions are checked again when clicked. If a path changed or another file now occupies the proposed name, the rename is refused and you can refresh the report. A failed rename shows a notice. Keep your backup until you have checked the destination vault and its links.
 
 ## Settings
+
+After a minor or major update, this plugin opens one What's new tab in the background. The tab and settings card suggest other NoteMods plugins and Zovo Chat and link to notemods.com for feedback ([privacy](https://notemods.com/privacy/)). The tab sends no data. Turn the tab off in Settings.
 
 Scan when paths change is off by default and needs Pro. Enabling it starts a scan and shows a desktop count. Turning it off removes that count. Losing Pro access also stops automatic scans; manual scanning still works.
 
@@ -98,7 +100,5 @@ After a successful check, Pro can work offline for up to 14 days. Sign out or a 
 ## Support
 
 Use the repository issue tracker for bugs. Include your Obsidian version, device operating systems, the affected rule and an anonymized pair of paths. Do not attach private notes or authentication details. Find other tools and support information at [NoteMods](https://notemods.com/).
-
-The exported repository includes build, lint and test scripts for collisions, name rules and rename safety.
 
 MIT licensed.

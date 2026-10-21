@@ -1,6 +1,6 @@
 {
 	"name": "vault-path-portability",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"private": true,
 	"description": "Find vault paths that can fail when moved between devices.",
 	"main": "main.js",

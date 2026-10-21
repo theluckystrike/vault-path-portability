@@ -4,6 +4,8 @@ import { createGitHubSponsors } from './license/github-obsidian';
 import { SPONSORS } from './pro';
 import { DEFAULT_SETTINGS, normalizeSettings, VaultPathPortabilitySettingTab } from './settings';
 import { fold, lengthScope, markdownReport, RULES, scanPaths, suggestPath, type Finding, type Rule } from './scan';
+import { setupHello } from './hello/index';
+import WHATS_NEW from './whats-new.json';
 
 const VIEW = 'vault-path-portability-report';
 export default class VaultPathPortabilityPlugin extends Plugin {
@@ -16,6 +18,8 @@ export default class VaultPathPortabilityPlugin extends Plugin {
 	private settingTab: VaultPathPortabilitySettingTab | null = null;
 	private renaming = false;
 	async onload(): Promise<void> {
+		// First: "What's new" reads its state before the settings load (packages/hello). It does not wait.
+		setupHello(this, WHATS_NEW);
 		this.settings = normalizeSettings(await this.loadData());
 		this.pro = createGitHubSponsors(this.app, this.manifest.id, SPONSORS, this);
 		this.pro.init();

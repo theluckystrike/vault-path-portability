@@ -1,6 +1,6 @@
 import { FileSystemAdapter, ItemView, Modal, Notice, Plugin, TFile, TFolder, normalizePath, type WorkspaceLeaf } from 'obsidian';
 import type { SponsorsManager } from './license/index';
-import { createGitHubSponsors } from './license/github-obsidian';
+import { createGitHubSponsors, showProNotice } from './license/github-obsidian';
 import { SPONSORS } from './pro';
 import { DEFAULT_SETTINGS, normalizeSettings, VaultPathPortabilitySettingTab } from './settings';
 import { fold, lengthScope, markdownReport, RULES, scanPaths, suggestPath, type Finding, type Rule } from './scan';
@@ -84,7 +84,7 @@ export default class VaultPathPortabilityPlugin extends Plugin {
 		catch { new Notice('Could not copy the report. Check clipboard access.'); }
 	}
 	async exportReport(): Promise<void> {
-		if (!this.pro?.isPro()) { new Notice('Report notes are a pro feature. You can copy the full report for free.'); return; }
+		if (!this.pro?.isPro()) { showProNotice(this.pro, 'Report notes are a pro feature. You can copy the full report for free.'); return; }
 		try {
 			const report = markdownReport(this.scan(), this.basePath());
 			const occupied = new Set(this.paths().map(fold));

@@ -1,5 +1,11 @@
 # vault-path-portability
 
+## 1.2.1
+
+### Patch Changes
+
+- The Vault Path Portability notice for a Pro feature now has a Sponsor on GitHub button.
+
 ## 1.2.0
 
 ### Minor Changes

@@ -4,7 +4,7 @@ Vault Path Portability finds names that can cause trouble when you move an Obsid
 
 <img src="https://raw.githubusercontent.com/theluckystrike/vault-path-portability/HEAD/docs/report.png" alt="A vault path report grouped by portability rule" width="720">
 
-The free tier includes the full scan, file opening and Markdown copying. Pro adds applying rename suggestions, automatic scans with a status count and export to a note. [Get Pro](https://github.com/sponsors/theluckystrike?metadata_source=vault-path-portability) or choose the [$15 one-time offer](https://github.com/sponsors/theluckystrike/sponsorships?tier_id=666162&metadata_source=vault-path-portability).
+The free tier includes the full scan, file opening and Markdown copying. Pro adds applying rename suggestions, automatic scans with a status count and export to a note. [Get Pro](https://github.com/sponsors/theluckystrike?frequency=one-time&metadata_source=vault-path-portability) or choose the [$15 one-time offer](https://github.com/sponsors/theluckystrike/sponsorships?tier_id=666162&metadata_source=vault-path-portability).
 
 Files with distinct names on one file system can collide on another. Review these groups before copying your vault. Scanning never renames, edits or deletes a file.
 
@@ -89,7 +89,7 @@ The scan uses paths already indexed by Obsidian. Hidden configuration folders, e
 
 The core features are free. Pro features need a GitHub Sponsors sponsorship of theluckystrike: $5 a month or more, or $15 once. A total payment of $15 meets the payment requirement for Pro without further payment. Sign-in and the checks below still apply. Your notes stay readable and editable with or without Pro.
 
-GitHub handles the payment. Sponsor at https://github.com/sponsors/theluckystrike. You need no account for the free features. Pro needs the GitHub account that sponsors.
+GitHub handles the payment. Sponsor at https://github.com/sponsors/theluckystrike?frequency=one-time&metadata_source=vault-path-portability. You need no account for the free features. Pro needs the GitHub account that sponsors.
 
 Until you select "Sign in with GitHub" in the settings, Vault Path Portability makes no network requests. Sign in uses the GitHub device flow. Vault Path Portability sends its public client ID and the scope `read:user` to `https://github.com/login/device/code` and shows you a code. While you enter the code at https://github.com/login/device, it asks `https://github.com/login/oauth/access_token` every few seconds to check the sign-in status. The scope permits profile reads only. GitHub needs this access to show the sponsorship tier. It grants no repository scope and no write access.
 
